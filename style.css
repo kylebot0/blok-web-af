@@ -1,0 +1,505 @@
+/*----------------------navigatie / opmaak-------------------------*/
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'PT Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F3E5D8;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100vw;
+  padding: 1.8em;
+  padding-top: 0.9em;
+  height: 10vh;
+  background-color: #fff;
+  position: fixed;
+  box-shadow: 0 0.5125em 0.725em 0 rgba(0, 0, 0, .15);
+  z-index: 1;
+}
+
+nav i {
+  color: #00d66c;
+  font-size: 2.5em;
+}
+
+nav>ul {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+nav ul>li:first-child {
+  flex-grow: 1;
+}
+
+nav i {
+  padding-right: 1em;
+}
+
+nav img {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 999px;
+}
+
+.show {
+  display: none;
+  text-decoration: none;
+  padding-right: 4em;
+  font-size: 1.2em;
+  color: #00d66c;
+  text-decoration: bold;
+  font-weight: bold;
+}
+
+.show:hover {
+  color: #15038C;
+}
+
+  {
+  background-color: green;
+}
+
+@media (min-width: 700px) {
+  nav i {
+    font-size: 0;
+  }
+
+  .show {
+    display: block;
+  }
+
+  nav img {
+    height: 3.2em;
+    width: 3.2em;
+  }
+}
+
+/*---------------------------main--------------------------------*/
+section h1 {
+  border-radius: 0.5em;
+  font-size: 2em;
+  text-align: center;
+  background-color: #00d66c;
+  padding: 5%;
+  color: white;
+  font-weight: bold;
+  opacity: 0.8;
+  max-width: 50%;
+}
+
+body>section {
+  display: flex;
+  align-items: center;
+}
+
+body>section {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  .main-home {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+  }
+
+  article:first-child {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  article:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  article:nth-child(3) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+
+  article:last-child {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+  }
+}
+
+@media (min-width: 800px) {
+  .main-lijst {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+  }
+
+  .main-lijst article:first-child {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+}
+
+#img-fix>section {
+  background-image: url(img/transavia.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30em;
+  width: 100%;
+}
+
+@media (min-width: 1080px) {
+  #img-fix>section {
+    height: 40em;
+  }
+
+  #img-fix>section {
+    -webkit-clip-path: polygon(50% 0%, 80% 0, 100% 0, 100% 95%, 55% 95%, 50% 100%, 45% 95%, 0 95%, 0 0, 20% 0);
+    clip-path: polygon(50% 0%, 80% 0, 100% 0, 100% 95%, 55% 95%, 50% 100%, 45% 95%, 0 95%, 0 0, 20% 0);
+  }
+}
+
+#img-fix>section {
+  clip-path: polygon(50% 0%, 80% 0, 100% 0, 100% 80%, 60% 80%, 50% 85%, 40% 80%, 0 80%, 0 0, 20% 0);
+}
+
+main>article {
+  margin-top: 0;
+  margin: 2em;
+  text-align: center;
+  background-color: #FBF7F4;
+  border-radius: 0.5em;
+}
+
+article h2 {
+  font-weight: 900;
+  color: white;
+  background-color: #15038C;
+  border-radius: 0.5em 0.5em 0px 0px;
+  padding: 1.2em;
+}
+
+article>div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-height: 40vh;
+  margin: 1em;
+}
+
+article div img {
+  margin: 1em;
+  cursor: pointer;
+  max-width: 50%;
+  max-height: 80%;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 200ms ease-out;
+  justify-content: center;
+}
+
+article:nth-of-type(3) div img:first-child, article:nth-of-type(4) div img:first-child {
+  margin-left: 50%;
+}
+
+article:nth-of-type(4) div img:first-child {
+  margin-left: 100%;
+}
+
+article div a img {
+  max-width: 100%;
+  max-height: 90%;
+}
+
+article div i {
+  color: grey;
+  font-size: 2em;
+  display: inline-block;
+  margin-bottom: 80vh;
+  transition: all 300ms;
+}
+
+article div i:hover {
+  cursor: pointer;
+}
+
+.favorite {
+  color: #EBEB00;
+  transform: rotate(360deg) scale(1.2);
+  transition: all 300ms ease-out;
+}
+
+.main-lijst>article div a img {
+  max-width: 100%;
+  max-height: 90%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 2.5em;
+  margin-top: 0;
+}
+
+.search-form input {
+  border: 2px solid #E83B6A;
+  border-bottom: 2px solid #CA2B55;
+  border-right: none;
+  width: 70%;
+  padding: 1em;
+  transition: all 0.3s;
+  font-size: 1.1em;
+  border-radius: 20px 0 0 20px;
+}
+
+.search-form input[type=text]:valid {
+  border-color: #00d66c;
+}
+
+.search-form input[type=text]:focus {
+  transform: scale(1.1);
+  border-right: 2px solid #CA2B55;
+}
+
+.search-form button {
+  padding: 0.5em 0.5em 0.5em 1.25em;
+  box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+  border-radius: 0 20px 20px 0;
+  background-color: #E83B6A;
+  color: white;
+  font-size: 1.5em;
+  max-width: 35%;
+  border-style: none;
+}
+
+/*----------------Verhaal nav------------------  */
+article div img:hover {
+  transform: scale(1.1);
+  transition: 200ms ease-in;
+}
+
+.nav-hide {
+  height: 0;
+  padding: 0;
+  transition: all 300ms;
+}
+
+.nav-btn-hidden {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: all 300ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: all 200ms;
+}
+
+nav {
+  transition: all 300ms ease-out;
+}
+
+#nav-btn {
+  background-color: white;
+  border-radius: 999px;
+  color: #00d66c;
+  height: 1em;
+  width: 1em;
+  font-size: 3em;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: all 300ms;
+  left: 50%;
+  border: none;
+  display: inline-block;
+}
+
+/* ------------------Load Animation------------- */
+header {
+  position: fixed;
+  background: #2184cd;
+  color: #fff;
+  padding: 1em;
+  height: 6em;
+  width: 100vw;
+  z-index: 4;
+}
+header h3 {
+  text-align: center;
+}
+header div {
+  background-color: white;
+  width: 95vw;
+  height: 1em;
+  border-radius: 999px;
+  margin-top: 1em;
+}
+
+#load-anm {
+  background-color: grey;
+  width: 95vw;
+  height: 1em;
+  border-radius: 999px;
+  margin-top: 1em;
+  overflow-x: hidden;
+}
+
+.downloading {
+  transform: ;
+}
+
+/* Responsive verhaal -------------------------- */
+.main-verhaal>article {
+  background-image: url(img/Paranoia_Groot.png);
+  width: 100vw;
+  height: 400vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+@media (max-width: 1400px) {
+  .main-verhaal>article {
+    background-image: url(img/paranoia_middel.png);
+  }
+
+  @media (max-width: 1000px) {
+    .main-verhaal>article {
+      background-image: url(img/paranoia_klein.png);
+      height: 600vh;
+    }
+
+    @media (max-width: 800px) {
+      .main-verhaal>article {
+        background-image: url(img/paranoia_erg_klein.png);
+      }
+
+      @media (max-width: 560px) {
+        .main-verhaal>article {
+          background-image: url(img/paranoia_mobiel.png);
+        }
+      }
+    }
+  }
+}
+
+/*------------------login--------------------*/
+.login-form {
+  display: flex;
+  flex-direction: column;
+  transition: all 400ms;
+  padding: 1em;
+}
+
+legend {
+  font-size: 1.5em;
+  background-color: darkblue;
+  color: white;
+  border-radius: 20px 20px;
+  padding: 0.5em 2em 0.5em 2em;
+}
+
+label {
+  display: flex;
+  justify-content: flex-start;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 400ms;
+  padding: 2.5em;
+  background: rgba(0, 255, 0, 0.3);
+  border: none;
+  border-radius: 1.5em;
+}
+
+fieldset:invalid {
+  background: rgba(255, 255, 255, .5);
+  padding: 2em;
+}
+
+fieldset:invalid i {
+  display: none;
+}
+
+fieldset i {
+  margin-left: 45%;
+  font-size: 3em;
+  color: #00d66c
+}
+
+.login-form input {
+  border-style: 0.5px solid grey;
+  padding: .25em;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  width: 100%;
+  transition: all 200ms;
+}
+
+.login-form input:valid {
+  border-color: #00d66c;
+  box-shadow: none;
+  border-style: solid;
+}
+
+.login-form input:focus {
+  transform: scale(1.1);
+}
+
+.login-form input:invalid {
+  border-radius: 0.2em;
+  border-style: solid grey;
+  background: #FBF7F4;
+}
+
+.login-form button {
+  font-size: 1.25em;
+  margin-top: 2em;
+  margin-left: 1em;
+  padding: 0.5em;
+  transition: all .2s 1s;
+  opacity: 1;
+  width: 8em;
+  box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+  border-radius: 20px 20px;
+  color: white;
+  background-color: #E83B6A;
+  border-style: none;
+}
+
+@media (min-width: 700px) {
+  .login-form input {
+    width: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+  }
+
+  label, fieldset {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+  }
+
+  .login-form button {
+    margin-left: 45%;
+  }
+}
